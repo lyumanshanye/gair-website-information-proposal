@@ -40,7 +40,7 @@ dialog{width:min(94vw,1440px);max-height:94vh;padding:0;border:0;border-radius:1
 <div class="band"><div class="band-inner"><div class="band-item"><b>30 秒</b><span>理解团队定位和主要方向</span></div><div class="band-item"><b>3 次点击</b><span>从方向到成果再到负责人</span></div><div class="band-item"><b>0 占位文案</b><span>招聘与合作信息完整可信</span></div><div class="band-item"><b>持续更新</b><span>成果、成员与动态有明确维护责任</span></div></div></div>
 
 <section class="section" id="summary"><div class="section-head"><p class="kicker">Executive summary</p><div><h2>问题不是内容少，而是内容之间没有形成证据链</h2><p class="section-intro">现有站已经拥有成员规模、项目积累、论文与团队活动，但访问者很难从“研究方向”顺畅走到“代表成果、参与成员、代码模型、最新进展和加入入口”。</p></div></div>
-<div class="grid three"><article class="card"><span class="card-label">最优先</span><h3>修复可信度断点</h3><p>Contact 页仍保留模板占位文案；多个成员没有有效个人信息页；“OPEN”按钮没有说明将打开 Paper、Code 还是 Project。</p></article><article class="card"><span class="card-label">最关键</span><h3>建立统一研究分类</h3><p>首页方向、Research 项目、People 兴趣标签和 Blog/News 标签必须使用同一套 taxonomy，形成可追踪关系。</p></article><article class="card"><span class="card-label">最终状态</span><h3>从名单变成能力地图</h3><p>用户应能按研究方向发现成员，按成员发现项目，按项目找到论文、代码、模型、数据、演示与后续文章。</p></article></div>
+<div class="grid three"><article class="card"><span class="card-label">最优先</span><h3>补全关键入口信息</h3><p>Contact 页的具体申请信息尚待补充；部分成员缺少有效个人信息页；“OPEN”按钮尚未说明将打开 Paper、Code 还是 Project。</p></article><article class="card"><span class="card-label">最关键</span><h3>建立统一研究分类</h3><p>首页方向、Research 项目、People 兴趣标签和 Blog/News 标签必须使用同一套 taxonomy，形成可追踪关系。</p></article><article class="card"><span class="card-label">最终状态</span><h3>从名单变成能力地图</h3><p>用户应能按研究方向发现成员，按成员发现项目，按项目找到论文、代码、模型、数据、演示与后续文章。</p></article></div>
 <p class="callout"><strong>一句话策略：</strong>保留 GAIR 现有使命与成果资产，重新组织为“定位 → 方向 → Work → People → Join”的闭环；Activities、Peripherals 等低频信息移入 Community，不再占据一级导航黄金位置。</p></section>
 
 <section class="section" id="audit"><div class="section-head"><p class="kicker">Current-state audit</p><div><h2>现状审计：基础材料齐全，但关键信息的完整度不均</h2><p class="section-intro">结论来自 2026-09-05 对公开页面的逐页读取。评价对象是信息结构，不评价成员规模和研究质量。</p></div></div>
@@ -48,13 +48,13 @@ dialog{width:min(94vw,1440px);max-height:94vh;padding:0;border:0;border-radius:1
 <div class="dimension">团队定位</div><div><span class="status base">有基础</span>首页有 mission，但缺少团队组成、独特能力和方向证据。</div><div>一句定位 + 团队背景 + 4–6 个研究方向 + Featured Work。</div>
 <div class="dimension">研究成果</div><div><span class="status base">有积累</span>Research 有论文与项目清单，但主要是扁平列表。</div><div>按统一方向组织；每项明确 Paper / Code / Model / Data / Demo / Blog。</div>
 <div class="dimension">成员信息</div><div><span class="status gap">缺字段</span>多数成员只有姓名和学历，研究兴趣与代表工作缺失。</div><div>角色、cohort、方向标签、代表成果、主页链接、更新时间。</div>
-<div class="dimension">招聘合作</div><div><span class="status gap">需立即修</span>公开 Contact 页存在模板占位文案。</div><div>岗位、要求、资源、流程、材料、时间、联系人完整可执行。</div>
+<div class="dimension">招聘合作</div><div><span class="status gap">待补全</span>Contact 页已设置四类入口，详细申请信息尚待完善。</div><div>岗位、要求、资源、流程、材料、时间、联系人完整可执行。</div>
 <div class="dimension">研究动态</div><div><span class="status gap">较孤立</span>News 数量少，与 Research/People 缺少关联。</div><div>按成果发布研究解读，带方向标签、作者、相关资产和日期。</div>
 <div class="dimension">校友网络</div><div><span class="status base">有名单</span>格式混合：学校、岗位、研究领域和经历并存。</div><div>统一为在组经历、方向、毕业年份、当前去向、代表成果。</div>
 <div class="dimension">内容维护</div><div><span class="status gap">不可见</span>缺少 last updated、数据负责人和失效链接检查。</div><div>结构化数据源、字段校验、季度复核、自动链接检查。</div></div>
 <div class="gallery" style="margin-top:34px">
 <figure class="figure"><button data-zoom="assets/plms-people-current.jpg"><img loading="lazy" src="assets/plms-people-current.jpg" alt="GAIR 当前 People 页面"></button><figcaption><strong>现状：People 更像成员名册</strong>成员很多，但用户无法快速知道每个人研究什么、做过什么、如何进一步了解。<br><a href="https://plms.ai/people/index.html" target="_blank" rel="noreferrer">来源页面 ↗</a></figcaption></figure>
-<figure class="figure"><button data-zoom="assets/plms-contact-current.jpg"><img loading="lazy" src="assets/plms-contact-current.jpg" alt="GAIR 当前 Contact 页面仍显示模板占位文案"></button><figcaption><strong>现状：Contact 是最明显的可信度断点</strong>四类入口具备正确框架，但正文仍是 Bootstrap 示例文案，应列为 P0 修复。<br><a href="https://plms.ai/contact/index.html" target="_blank" rel="noreferrer">来源页面 ↗</a></figcaption></figure>
+<figure class="figure"><button data-zoom="assets/plms-contact-current.jpg"><img loading="lazy" src="assets/plms-contact-current.jpg" alt="GAIR 当前 Contact 页面，详细申请信息尚待补充"></button><figcaption><strong>现状：招聘与合作信息尚未补全</strong>页面已经设置研究生、实习生、博士后和合作咨询四类入口，但详细要求、申请材料、联系方式和流程仍待完善，建议优先补充。<br><a href="https://plms.ai/contact/index.html" target="_blank" rel="noreferrer">来源页面 ↗</a></figcaption></figure>
 <figure class="figure"><button data-zoom="assets/plms-research-current.jpg"><img loading="lazy" src="assets/plms-research-current.jpg" alt="GAIR 当前 Research 页面"></button><figcaption><strong>现状：成果资产丰富，但关联关系不足</strong>论文和项目数量可观；下一步应补充方向、贡献摘要、成员关系，并将 “OPEN” 拆成明确的资产类型。<br><a href="https://plms.ai/research/index.html" target="_blank" rel="noreferrer">来源页面 ↗</a></figcaption></figure>
 </div></section>
 
