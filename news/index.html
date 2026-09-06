@@ -1,290 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>GAIR: News</title>
-    <link rel="icon" href="../fig/balloon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <link href="../mdb/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../mdb/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../mdb/css/style.css">
-    <link rel="stylesheet" href="../mdb5/css/mdb.min.css"/>
-
-    <style>
-        body {
-            background: #f6f7f9;
-        }
-
-        .news-page {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 4.5rem 1rem 5rem;
-        }
-
-        .news-heading {
-            margin-bottom: 2rem;
-        }
-
-        .news-heading h1 {
-            color: #820014;
-            font-weight: 700;
-        }
-
-        .news-card {
-            overflow: hidden;
-            border: 0;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(35, 35, 35, 0.12);
-        }
-
-        .news-copy {
-            padding: 2rem 2.25rem 2.25rem;
-            text-align: left;
-        }
-
-        .news-meta {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.8rem;
-            color: #6c757d;
-            font-size: 0.95rem;
-        }
-
-        .news-label {
-            display: inline-block;
-            padding: 0.3rem 0.75rem;
-            border-radius: 999px;
-            background: #820014;
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .news-title {
-            color: #242424;
-            font-size: 2rem;
-            line-height: 1.25;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .news-lead {
-            color: #454545;
-            font-size: 1.12rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .news-video {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-        }
-
-        .news-source {
-            padding: 0.8rem 1.25rem;
-            background: #f1f2f4;
-            color: #666;
-            font-size: 0.9rem;
-            text-align: left;
-        }
-
-        .news-details {
-            color: #555;
-            line-height: 1.75;
-            margin-top: 1.4rem;
-            margin-bottom: 0;
-        }
-
-        .news-gallery {
-            padding: 0 2.25rem 2.25rem;
-        }
-
-        .news-gallery h3 {
-            color: #820014;
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-
-        .news-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1rem;
-        }
-
-        .news-gallery-figure {
-            overflow: hidden;
-            margin: 0;
-            background: #f1f2f4;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(35, 35, 35, 0.1);
-        }
-
-        .news-gallery-figure img {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-        }
-
-        .news-gallery-figure.meme img {
-            padding: 1.25rem;
-            background: #f7f7f7;
-            object-fit: contain;
-        }
-
-        .news-gallery-figure figcaption {
-            padding: 0.75rem 1rem;
-            color: #555;
-            font-size: 0.95rem;
-            text-align: center;
-        }
-
-        @media (max-width: 767px) {
-            .news-page {
-                padding-top: 3.5rem;
-            }
-
-            .news-copy {
-                padding: 1.5rem;
-            }
-
-            .news-title {
-                font-size: 1.55rem;
-            }
-
-            .news-gallery {
-                padding: 0 1.5rem 1.5rem;
-            }
-
-            .news-gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="../assets/site.css">
-    <script src="../assets/site.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="News, research releases, media coverage and team activities from GAIR.">
+  <meta name="theme-color" content="#102d57">
+  <title>News &amp; Activities — GAIR</title>
+  <link rel="icon" href="../fig/balloon.png">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
-<body class="legacy-page">
-<header>
-    <nav class="navbar navbar-expand-lg ml-auto navbar-dark fixed-top scrolling-navbar" style="background: #820014!important">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../fig/travel.png" class="rounded-circle" width="30" alt="GAIR">
-            </a>
-            <a class="navbar-brand" href="../index.html"><strong>GAIR</strong></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<body data-title-en="News & Activities — GAIR" data-title-zh="新闻与活动 — GAIR" data-description-en="News, research releases, media coverage and team activities from GAIR." data-description-zh="GAIR 的新闻、研究发布、媒体报道与团队活动。">
+  <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳至正文">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="../index.html" aria-label="GAIR home"><span class="brand-mark">G</span><span>GAIR<small>Generative AI Research Lab</small></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation" data-en="Menu" data-zh="菜单">Menu</button><div class="nav-links" id="nav-links"><a href="../research/index.html" data-en="Research" data-zh="研究">Research</a><a href="../people/index.html" data-en="People" data-zh="成员">People</a><a href="../index.html#resources" data-en="Resources" data-zh="成果">Resources</a><a href="index.html" aria-current="page" data-en="Updates" data-zh="动态">Updates</a><a href="https://github.com/GAIR-NLP" target="_blank" rel="noopener">GitHub ↗</a><a class="nav-cta" href="../contact/index.html" data-en="Join us" data-zh="加入我们">Join us</a></div></nav></header>
 
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../people/index.html"><i class="far fa-file-alt"></i> People</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../research/index.html"><i class="fas fa-sync-alt"></i> Research</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../activities/index.html"><i class="fas fa-users"></i> Activities</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="far fa-newspaper"></i> News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/gair-nlp" target="_blank" rel="noopener"><i class="fab fa-github pr-1"></i> Github</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../peripherals/index.html"><i class="fab fa-qq pr-1"></i> Peripherals</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../contact/index.html"><i class="fab fa-whatsapp pr-1"></i> Contact</a>
-                </li>
-            </ul>
+  <main id="main">
+    <section class="page-hero updates-hero"><div class="container"><span class="eyebrow" data-en="News &amp; life at GAIR" data-zh="新闻与实验室生活">News &amp; life at GAIR</span><h1 data-en="Research, releases and the people behind them." data-zh="研究、发布，以及成果背后的人。">Research, releases and the people behind them.</h1><p data-en="Major lab news sits alongside research releases and team activities, so the page reflects both the work and the community that makes it possible." data-zh="这里同时记录实验室新闻、研究发布与团队活动，既呈现工作本身，也呈现让工作成为可能的共同体。">Major lab news sits alongside research releases and team activities, so the page reflects both the work and the community that makes it possible.</p><div class="research-jump"><a href="#news" data-en="Lab news ↓" data-zh="实验室新闻 ↓">Lab news ↓</a><a href="#releases" data-en="Research releases ↓" data-zh="研究发布 ↓">Research releases ↓</a><a href="#activities" data-en="Team activities ↓" data-zh="团队活动 ↓">Team activities ↓</a></div></div></section>
+
+    <section class="section" id="news">
+      <div class="container updates-shell">
+        <div class="center-heading"><span class="section-kicker" data-en="Latest lab news" data-zh="最新实验室新闻">Latest lab news</span><h2 data-en="A visit to the research community." data-zh="一次面向科研共同体的调研交流。">A visit to the research community.</h2></div>
+        <article class="media-story">
+          <div class="media-story-copy"><span class="date" data-en="August 5, 2026 · Media coverage" data-zh="2026 年 8 月 5 日 · 媒体报道">August 5, 2026 · Media coverage</span><h3 data-en="Chen Jining visits Shanghai Innovation Institute" data-zh="陈吉宁赴上海创智学院调研">Chen Jining visits Shanghai Innovation Institute</h3><p data-en="Chen Jining toured the workspace where GAIR is based and exchanged views with team members about ongoing work, emerging research paradigms and the cultivation of future AI scientists." data-zh="陈吉宁调研 GAIR 所在工作空间，并与团队成员围绕在研工作、前沿科研范式和未来 AI 科学家培养展开交流。">Chen Jining toured the workspace where GAIR is based and exchanged views with team members about ongoing work, emerging research paradigms and the cultivation of future AI scientists.</p><p class="source-note" data-en="Source: Dragon Television (东方卫视). The report is in Chinese." data-zh="来源：东方卫视。视频报道为中文。">Source: Dragon Television (东方卫视). The report is in Chinese.</p></div>
+          <video controls playsinline preload="metadata" poster="media/chen-jining-visit-2026.jpg" aria-label="Dragon TV report on Chen Jining's visit"><source src="media/chen-jining-visit-2026.mp4" type="video/mp4"><span data-en="Your browser does not support embedded video." data-zh="你的浏览器不支持嵌入视频。">Your browser does not support embedded video.</span></video>
+        </article>
+        <div class="visit-strip"><img src="media/visit-gallery-01.jpg" alt="A GAIR member speaking during the visit"><img src="media/visit-gallery-02.jpg" alt="A GAIR member presenting research"><img src="media/visit-gallery-04.jpg" alt="Chen Jining speaking with team members"><img src="media/visit-gallery-05.jpg" alt="GAIR members during the visit"></div>
+      </div>
+    </section>
+
+    <section class="section soft" id="releases">
+      <div class="container updates-shell">
+        <div class="center-heading"><span class="section-kicker" data-en="Research releases" data-zh="研究发布">Research releases</span><h2 data-en="New work, with the artifacts attached." data-zh="发布新工作，也公开支撑成果。">New work, with the artifacts attached.</h2><p class="section-intro" data-en="Follow the paper, code, data and model releases together." data-zh="在同一处查看论文、代码、数据与模型发布。">Follow the paper, code, data and model releases together.</p></div>
+        <div class="release-grid">
+          <article><time>2026.05</time><span>ICML 2026 Oral</span><h3>daVinci-Dev</h3><p data-en="Agent-native mid-training for software engineering, with models, data and a high-performance processing pipeline." data-zh="面向软件工程的智能体原生中期训练，公开模型、数据与高性能处理管线。">Agent-native mid-training for software engineering, with models, data and a high-performance processing pipeline.</p><a href="https://github.com/GAIR-NLP/daVinci-Dev" target="_blank" rel="noopener" data-en="View release ↗" data-zh="查看发布 ↗">View release ↗</a></article>
+          <article><time>2026.03</time><span data-en="Open pretraining" data-zh="开放预训练">Open pretraining</span><h3>daVinci-LLM</h3><p data-en="A transparent 3B pretraining run with 7.5T+ traceable tokens, intermediate checkpoints and complete experimental evidence." data-zh="公开一次透明的 3B 预训练：7.5T+ 可追溯 tokens、中间检查点与完整实验依据。">A transparent 3B pretraining run with 7.5T+ traceable tokens, intermediate checkpoints and complete experimental evidence.</p><a href="https://github.com/GAIR-NLP/daVinci-LLM" target="_blank" rel="noopener" data-en="View release ↗" data-zh="查看发布 ↗">View release ↗</a></article>
+          <article><time>2026.03</time><span data-en="Audio-video generation" data-zh="音视频生成">Audio-video generation</span><h3>daVinci-MagiHuman</h3><p data-en="An open single-stream audio-video foundation model for fast, synchronized human-centric generation." data-zh="开源单流音视频基础模型，实现快速、同步的人体中心生成。">An open single-stream audio-video foundation model for fast, synchronized human-centric generation.</p><a href="https://github.com/GAIR-NLP/daVinci-MagiHuman" target="_blank" rel="noopener" data-en="View release ↗" data-zh="查看发布 ↗">View release ↗</a></article>
         </div>
-    </nav>
-</header>
+      </div>
+    </section>
 
-<main class="news-page">
-    <div class="news-heading text-center">
-        <h1>News</h1>
-        <p class="text-muted">Updates and media coverage from GAIR Lab</p>
-    </div>
-
-    <article class="card news-card">
-        <div class="news-copy">
-            <div class="news-meta">
-                <span class="news-label">Media Coverage</span>
-                <time datetime="2026-08-05">August 5, 2026</time>
-            </div>
-            <h2 class="news-title">Chen Jining Visits Shanghai Innovation Institute</h2>
-            <p class="news-lead">
-                During a research visit to Shanghai Innovation Institute, Chen Jining toured the workspace where our team is based and held a warm exchange with our members about our ongoing work.
-            </p>
+    <section class="section" id="activities">
+      <div class="container updates-shell">
+        <div class="center-heading"><span class="section-kicker" data-en="Team activities" data-zh="团队活动">Team activities</span><h2 data-en="A lab is also a place to grow together." data-zh="实验室也是一起成长的地方。">A lab is also a place to grow together.</h2><p class="section-intro" data-en="Milestones, outings and shared time outside the lab are part of how a collaborative research culture is built." data-zh="成果节点、集体出行与工作之外的共同经历，也构成协作型科研文化的一部分。">Milestones, outings and shared time outside the lab are part of how a collaborative research culture is built.</p></div>
+        <div class="activity-story-grid">
+          <article class="activity-story activity-story-wide"><img src="../activities/fig/happy-valley/happy-valley-01.jpg" alt="GAIR team at Shanghai Happy Valley"><div><time data-en="June 2025" data-zh="2025 年 6 月">June 2025</time><h3 data-en="Shanghai Happy Valley" data-zh="上海欢乐谷团建">Shanghai Happy Valley</h3><p data-en="A summer day outside the lab to recharge, talk and strengthen the relationships behind everyday collaboration." data-zh="在实验室之外度过夏日时光，在放松与交流中增进日常合作背后的连接。">A summer day outside the lab to recharge, talk and strengthen the relationships behind everyday collaboration.</p></div></article>
+          <article class="activity-story"><img src="../activities/fig/disney/disney-02.jpg" alt="GAIR team at Shanghai Disneyland"><div><time data-en="March 2025" data-zh="2025 年 3 月">March 2025</time><h3 data-en="Disney adventure" data-zh="上海迪士尼团建">Disney adventure</h3><p data-en="A team outing to Shanghai Disneyland." data-zh="团队共同前往上海迪士尼，在科研之外留下新的集体记忆。">A team outing to Shanghai Disneyland.</p></div></article>
+          <article class="activity-story"><img src="../activities/fig/annual/annual.jpg" alt="GAIR annual gathering"><div><time data-en="January 2025" data-zh="2025 年 1 月">January 2025</time><h3 data-en="Annual gathering" data-zh="年度聚会">Annual gathering</h3><p data-en="Looking back on a year of research and forward to the next set of questions." data-zh="回顾一年的研究进展，也共同期待下一批值得追问的问题。">Looking back on a year of research and forward to the next set of questions.</p></div></article>
+          <article class="activity-story"><img src="../activities/fig/dinner/dinner.jpg" alt="GAIR team dinner"><div><time data-en="2024–2025" data-zh="2024–2025">2024–2025</time><h3 data-en="Milestone dinners" data-zh="成果节点聚餐">Milestone dinners</h3><p data-en="Celebrating paper submissions, acceptances and the collective effort behind them." data-zh="庆祝论文投稿、录用，以及每一项成果背后的共同努力。">Celebrating paper submissions, acceptances and the collective effort behind them.</p></div></article>
         </div>
+        <div class="center-action"><a class="button secondary" href="../activities/index.html" data-en="Open the full photo archive →" data-zh="查看完整活动相册 →">Open the full photo archive →</a></div>
+      </div>
+    </section>
+  </main>
 
-        <video class="news-video" controls playsinline preload="metadata"
-               poster="./media/chen-jining-visit-2026.jpg"
-               aria-label="Dragon TV report on Chen Jining's visit to Shanghai Innovation Institute">
-            <source src="./media/chen-jining-visit-2026.mp4" type="video/mp4">
-            Your browser does not support embedded video.
-            <a href="./media/chen-jining-visit-2026.mp4">Download the video</a>.
-        </video>
-        <div class="news-source">
-            Source: Dragon Television (东方卫视). The report is presented in Chinese.
-        </div>
-
-        <div class="news-copy">
-            <p class="news-details">
-                The visit highlighted efforts to advance research paradigms, build high-level research platforms, and cultivate future AI scientists and entrepreneurs.
-            </p>
-        </div>
-
-        <section class="news-gallery" aria-labelledby="visit-gallery-title">
-            <h3 id="visit-gallery-title">Visit Highlights</h3>
-            <div class="news-gallery-grid">
-                <figure class="news-gallery-figure">
-                    <img src="./media/visit-gallery-01.jpg" loading="lazy" decoding="async"
-                         alt="A GAIR team member speaking during the visit">
-                </figure>
-                <figure class="news-gallery-figure">
-                    <img src="./media/visit-gallery-02.jpg" loading="lazy" decoding="async"
-                         alt="A GAIR team member presenting the lab's work">
-                </figure>
-                <figure class="news-gallery-figure">
-                    <img src="./media/visit-gallery-03.jpg" loading="lazy" decoding="async"
-                         alt="A team member introducing a project in the workspace">
-                </figure>
-                <figure class="news-gallery-figure">
-                    <img src="./media/visit-gallery-04.jpg" loading="lazy" decoding="async"
-                         alt="Chen Jining speaking with team members in the lab">
-                </figure>
-                <figure class="news-gallery-figure">
-                    <img src="./media/visit-gallery-05.jpg" loading="lazy" decoding="async"
-                         alt="GAIR team members listening during the visit">
-                </figure>
-                <figure class="news-gallery-figure meme">
-                    <img src="./media/visit-gallery-meme.png" loading="lazy" decoding="async"
-                         alt="A team member from the report turned into a reaction meme">
-                    <figcaption>被制作成了表情包（）</figcaption>
-                </figure>
-            </div>
-        </section>
-    </article>
-</main>
-
-<script type="text/javascript" src="../mdb/js/jquery.min.js"></script>
-<script type="text/javascript" src="../mdb/js/popper.min.js"></script>
-<script type="text/javascript" src="../mdb/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../mdb/js/mdb.min.js"></script>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">GAIR</div><p class="footer-note" data-en="Open, evidence-driven research on how intelligent systems learn, reason and act." data-zh="以开放和证据驱动的方式，研究智能系统如何学习、推理与行动。">Open, evidence-driven research on how intelligent systems learn, reason and act.</p></div><div class="footer-col"><strong data-en="Explore" data-zh="探索">Explore</strong><a href="../research/index.html" data-en="Research" data-zh="研究">Research</a><a href="../people/index.html" data-en="People" data-zh="成员">People</a><a href="index.html" data-en="News &amp; activities" data-zh="新闻与活动">News &amp; activities</a></div><div class="footer-col"><strong data-en="Connect" data-zh="联系">Connect</strong><a href="../contact/index.html" data-en="Join GAIR" data-zh="加入 GAIR">Join GAIR</a><a href="https://github.com/GAIR-NLP" target="_blank" rel="noopener">GitHub ↗</a><a href="https://scholar.google.com/citations?user=oIz_CYEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></div></div><div class="footer-bottom">© <span data-year>2026</span> Generative Artificial Intelligence Research Lab.</div></div></footer>
+  <script src="../assets/site.js"></script>
 </body>
 </html>
