@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  Required meta tags always come first  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GAIR: Shanghai Happy Valley Adventure Photos</title>
+    <link rel="icon" href="../../fig/balloon.png">
+    <!--  Font Awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../../mdb/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../../mdb/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../mdb/css/style.css">
+    <!-- Custom styles: Hover -->
+    <link rel="stylesheet" href="../../mdb5/css/mdb.min.css"/>
+    <!-- Custom styles -->
+    <!-- 添加lightbox相关样式和脚本 -->
+<style>
+    .photo-card {
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .photo-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    
+    .gallery-container {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    
+    .album-header {
+        margin-bottom: 40px;
+    }
+    
+    /* 简易lightbox样式 */
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 50px;
+    }
+    
+    .lightbox img {
+        max-width: 90%;
+        max-height: 80vh;
+        margin: auto;
+        z-index: 1000;
+    }
+    
+    .lightbox-close {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 1001;
+        background: rgba(0, 0, 0, 0.5);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    
+    .lightbox-nav {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        cursor: pointer;
+        z-index: 999;
+    }
+    
+    .lightbox-prev {
+        left: 0;
+    }
+    
+    .lightbox-next {
+        right: 0;
+    }
+    
+    .nav-icon {
+        position: absolute;
+        top: 50%;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 36px;
+    }
+    
+    .prev-icon {
+        left: 30px;
+    }
+    
+    .next-icon {
+        right: 30px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Main Navigation -->
+<header>
+    <nav class="navbar navbar-expand-lg ml-auto navbar-dark fixed-top scrolling-navbar"
+         style="background: #820014!important">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../fig/travel.png" class="rounded-circle" width="30" alt="xlab">
+            </a>
+
+            <a class="navbar-brand" href="../../index.html"><strong>GAIR</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="navbar-nav ml-auto">
+                <a class="nav-link" href="../../people/index.html">
+                    <li class="nav-item">
+                        <i class="far fa-file-alt"></i>
+                        People
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="../../research/index.html">
+                    <li class="nav-item">
+                        <i class="fas fa-sync-alt"></i>
+                        Research
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link active" href="../index.html">
+                    <li class="nav-item">
+                        <i class="fas fa-users"></i>
+                        Activities
+                    </a>
+                    </li>
+                </a>
+      
+                <a class="nav-link" href="../../news/index.html">
+                    <li class="nav-item">
+                        <i class="far fa-newspaper"></i>
+                        News
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="https://github.com/gair-nlp" target="_blank">
+                    <li class="nav-item">
+                        <i class="fab fa-github pr-1"></i> Github
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="../../peripherals/index.html">
+                    <li class="nav-item">
+                        <i class="fab fa-qq pr-1"></i> Peripherals
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="../../contact/index.html">
+                    <li class="nav-item">
+                        <i class="fab fa-whatsapp pr-1"></i> Contact
+                    </a>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container gallery-container">
+
+    
+    <div class="row album-header">
+        <div class="col-md-12">
+            <h1 class="font-weight-bold">Shanghai Happy Valley Adventure</h1>
+            <p class="lead">June 2025 - Shanghai Happy Valley</p>
+            <p>Our lab had an exciting day at Shanghai Happy Valley, experiencing thrilling rides and enjoying the charm of the theme park. It was a wonderful team-building activity that allowed everyone to enjoy relaxing moments outside of academic research and further strengthened the bonds between team members.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h3 class="mb-4">Photo Gallery</h3>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Photo 1 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-01.jpg" class="card-img-top" alt="Happy Valley Photo 1" onclick="openLightbox('../fig/happy-valley/happy-valley-01.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-02.jpg" class="card-img-top" alt="Happy Valley Photo 2" onclick="openLightbox('../fig/happy-valley/happy-valley-02.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 3 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-03.jpg" class="card-img-top" alt="Happy Valley Photo 3" onclick="openLightbox('../fig/happy-valley/happy-valley-03.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 4 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-04.jpg" class="card-img-top" alt="Happy Valley Photo 4" onclick="openLightbox('../fig/happy-valley/happy-valley-04.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 5 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-05.jpg" class="card-img-top" alt="Happy Valley Photo 5" onclick="openLightbox('../fig/happy-valley/happy-valley-05.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 6 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-06.jpg" class="card-img-top" alt="Happy Valley Photo 6" onclick="openLightbox('../fig/happy-valley/happy-valley-06.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 7 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-07.jpg" class="card-img-top" alt="Happy Valley Photo 7" onclick="openLightbox('../fig/happy-valley/happy-valley-07.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 8 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-08.jpg" class="card-img-top" alt="Happy Valley Photo 8" onclick="openLightbox('../fig/happy-valley/happy-valley-08.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 9 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-09.jpg" class="card-img-top" alt="Happy Valley Photo 9" onclick="openLightbox('../fig/happy-valley/happy-valley-09.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 10 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-10.jpg" class="card-img-top" alt="Happy Valley Photo 10" onclick="openLightbox('../fig/happy-valley/happy-valley-10.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 11 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-11.jpg" class="card-img-top" alt="Happy Valley Photo 11" onclick="openLightbox('../fig/happy-valley/happy-valley-11.jpg')">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Photo 12 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card photo-card">
+                <div class="view overlay">
+                    <img src="../fig/happy-valley/happy-valley-12.jpg" class="card-img-top" alt="Happy Valley Photo 12" onclick="openLightbox('../fig/happy-valley/happy-valley-12.jpg')">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a href="../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Activities
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 添加lightbox HTML -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <div class="lightbox-nav lightbox-prev" onclick="prevImage()">
+        <span class="nav-icon prev-icon">‹</span>
+    </div>
+    <img id="lightbox-img" src="">
+    <div class="lightbox-nav lightbox-next" onclick="nextImage()">
+        <span class="nav-icon next-icon">›</span>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4 mt-5">
+    <div class="footer-copyright text-center py-3">© 2025 GAIR:
+        <a href="../../index.html">Generative Artificial Intelligence Research Lab</a>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="../../mdb/js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../../mdb/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../../mdb/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../../mdb/js/mdb.min.js"></script>
+
+<script>
+    // 存储所有图片路径（按显示顺序排列）
+    const images = [
+        '../fig/happy-valley/happy-valley-01.jpg',
+        '../fig/happy-valley/happy-valley-02.jpg',
+        '../fig/happy-valley/happy-valley-03.jpg',
+        '../fig/happy-valley/happy-valley-04.jpg',
+        '../fig/happy-valley/happy-valley-05.jpg',
+        '../fig/happy-valley/happy-valley-06.jpg',
+        '../fig/happy-valley/happy-valley-07.jpg',
+        '../fig/happy-valley/happy-valley-08.jpg',
+        '../fig/happy-valley/happy-valley-09.jpg',
+        '../fig/happy-valley/happy-valley-10.jpg',
+        '../fig/happy-valley/happy-valley-11.jpg',
+        '../fig/happy-valley/happy-valley-12.jpg'
+    ];
+    
+    let currentIndex = 0;
+    
+    function openLightbox(imgSrc) {
+        // 找到当前图片的索引
+        currentIndex = images.indexOf(imgSrc);
+        document.getElementById('lightbox-img').src = imgSrc;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+    
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+    
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById('lightbox-img').src = images[currentIndex];
+    }
+    
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('lightbox-img').src = images[currentIndex];
+    }
+    
+    // 关闭lightbox的额外方法
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+    
+    // ESC键关闭lightbox
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            prevImage();
+        } else if (e.key === 'ArrowRight') {
+            nextImage();
+        }
+    });
+</script>
+
+</body>
+</html>

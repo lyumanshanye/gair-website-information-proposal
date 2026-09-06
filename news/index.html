@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GAIR: News</title>
+    <link rel="icon" href="../fig/balloon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="../mdb/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../mdb/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../mdb/css/style.css">
+    <link rel="stylesheet" href="../mdb5/css/mdb.min.css"/>
+
+    <style>
+        body {
+            background: #f6f7f9;
+        }
+
+        .news-page {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 4.5rem 1rem 5rem;
+        }
+
+        .news-heading {
+            margin-bottom: 2rem;
+        }
+
+        .news-heading h1 {
+            color: #820014;
+            font-weight: 700;
+        }
+
+        .news-card {
+            overflow: hidden;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(35, 35, 35, 0.12);
+        }
+
+        .news-copy {
+            padding: 2rem 2.25rem 2.25rem;
+            text-align: left;
+        }
+
+        .news-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.8rem;
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .news-label {
+            display: inline-block;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            background: #820014;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .news-title {
+            color: #242424;
+            font-size: 2rem;
+            line-height: 1.25;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .news-lead {
+            color: #454545;
+            font-size: 1.12rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .news-source {
+            padding: 0.8rem 1.25rem;
+            background: #f1f2f4;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .news-details {
+            color: #555;
+            line-height: 1.75;
+            margin-top: 1.4rem;
+            margin-bottom: 0;
+        }
+
+        .news-gallery {
+            padding: 0 2.25rem 2.25rem;
+        }
+
+        .news-gallery h3 {
+            color: #820014;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .news-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .news-gallery-figure {
+            overflow: hidden;
+            margin: 0;
+            background: #f1f2f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(35, 35, 35, 0.1);
+        }
+
+        .news-gallery-figure img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .news-gallery-figure.meme img {
+            padding: 1.25rem;
+            background: #f7f7f7;
+            object-fit: contain;
+        }
+
+        .news-gallery-figure figcaption {
+            padding: 0.75rem 1rem;
+            color: #555;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .news-page {
+                padding-top: 3.5rem;
+            }
+
+            .news-copy {
+                padding: 1.5rem;
+            }
+
+            .news-title {
+                font-size: 1.55rem;
+            }
+
+            .news-gallery {
+                padding: 0 1.5rem 1.5rem;
+            }
+
+            .news-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/site.css">
+    <script src="../assets/site.js" defer></script>
+</head>
+<body class="legacy-page">
+<header>
+    <nav class="navbar navbar-expand-lg ml-auto navbar-dark fixed-top scrolling-navbar" style="background: #820014!important">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../fig/travel.png" class="rounded-circle" width="30" alt="GAIR">
+            </a>
+            <a class="navbar-brand" href="../index.html"><strong>GAIR</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../people/index.html"><i class="far fa-file-alt"></i> People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../research/index.html"><i class="fas fa-sync-alt"></i> Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../activities/index.html"><i class="fas fa-users"></i> Activities</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="far fa-newspaper"></i> News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/gair-nlp" target="_blank" rel="noopener"><i class="fab fa-github pr-1"></i> Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../peripherals/index.html"><i class="fab fa-qq pr-1"></i> Peripherals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact/index.html"><i class="fab fa-whatsapp pr-1"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="news-page">
+    <div class="news-heading text-center">
+        <h1>News</h1>
+        <p class="text-muted">Updates and media coverage from GAIR Lab</p>
+    </div>
+
+    <article class="card news-card">
+        <div class="news-copy">
+            <div class="news-meta">
+                <span class="news-label">Media Coverage</span>
+                <time datetime="2026-08-05">August 5, 2026</time>
+            </div>
+            <h2 class="news-title">Chen Jining Visits Shanghai Innovation Institute</h2>
+            <p class="news-lead">
+                During a research visit to Shanghai Innovation Institute, Chen Jining toured the workspace where our team is based and held a warm exchange with our members about our ongoing work.
+            </p>
+        </div>
+
+        <video class="news-video" controls playsinline preload="metadata"
+               poster="./media/chen-jining-visit-2026.jpg"
+               aria-label="Dragon TV report on Chen Jining's visit to Shanghai Innovation Institute">
+            <source src="./media/chen-jining-visit-2026.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+            <a href="./media/chen-jining-visit-2026.mp4">Download the video</a>.
+        </video>
+        <div class="news-source">
+            Source: Dragon Television (东方卫视). The report is presented in Chinese.
+        </div>
+
+        <div class="news-copy">
+            <p class="news-details">
+                The visit highlighted efforts to advance research paradigms, build high-level research platforms, and cultivate future AI scientists and entrepreneurs.
+            </p>
+        </div>
+
+        <section class="news-gallery" aria-labelledby="visit-gallery-title">
+            <h3 id="visit-gallery-title">Visit Highlights</h3>
+            <div class="news-gallery-grid">
+                <figure class="news-gallery-figure">
+                    <img src="./media/visit-gallery-01.jpg" loading="lazy" decoding="async"
+                         alt="A GAIR team member speaking during the visit">
+                </figure>
+                <figure class="news-gallery-figure">
+                    <img src="./media/visit-gallery-02.jpg" loading="lazy" decoding="async"
+                         alt="A GAIR team member presenting the lab's work">
+                </figure>
+                <figure class="news-gallery-figure">
+                    <img src="./media/visit-gallery-03.jpg" loading="lazy" decoding="async"
+                         alt="A team member introducing a project in the workspace">
+                </figure>
+                <figure class="news-gallery-figure">
+                    <img src="./media/visit-gallery-04.jpg" loading="lazy" decoding="async"
+                         alt="Chen Jining speaking with team members in the lab">
+                </figure>
+                <figure class="news-gallery-figure">
+                    <img src="./media/visit-gallery-05.jpg" loading="lazy" decoding="async"
+                         alt="GAIR team members listening during the visit">
+                </figure>
+                <figure class="news-gallery-figure meme">
+                    <img src="./media/visit-gallery-meme.png" loading="lazy" decoding="async"
+                         alt="A team member from the report turned into a reaction meme">
+                    <figcaption>被制作成了表情包（）</figcaption>
+                </figure>
+            </div>
+        </section>
+    </article>
+</main>
+
+<script type="text/javascript" src="../mdb/js/jquery.min.js"></script>
+<script type="text/javascript" src="../mdb/js/popper.min.js"></script>
+<script type="text/javascript" src="../mdb/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../mdb/js/mdb.min.js"></script>
+</body>
+</html>

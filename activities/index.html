@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  Required meta tags always come first  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GAIR: Team Activities</title>
+    <link rel="icon" href="../fig/balloon.png">
+    <!--  Font Awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../mdb/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../mdb/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../mdb/css/style.css">
+    <!-- Custom styles: Hover -->
+    <link rel="stylesheet" href="../mdb5/css/mdb.min.css"/>
+    <!-- Custom styles -->
+    <style>
+        .force-scroll {
+            overflow-y: scroll;
+            height: 200px;
+        }
+
+        ul.timeline-3 {
+            list-style-type: none;
+            position: relative;
+        }
+        
+        /* 时间轴样式 */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            width: 6px;
+            background-color: #820014;
+            top: 0;
+            bottom: 30%; /* 缩短时间轴线，不要让它穿过最后的内容 */
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #820014;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #f9f9f9;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #f9f9f9;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #f9f9f9;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #f9f9f9 transparent transparent;
+        }
+        
+        .right::after {
+            left: -13px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #f9f9f9;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-content h2 {
+            margin-top: 0;
+            color: #820014;
+            font-size: 1.5rem;
+        }
+        
+        .timeline-date {
+            color: #820014;
+            font-weight: bold;
+        }
+        
+        .story-continues {
+            text-align: center;
+            padding: 40px 0 20px 0;
+            position: relative;
+            margin-top: 60px;
+        }
+        
+        .story-content {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .story-title {
+            color: #820014;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .timeline-line {
+                left: 31px;
+            }
+            
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid #f9f9f9;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #f9f9f9 transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/site.css">
+    <script src="../assets/site.js" defer></script>
+</head>
+<body class="legacy-page">
+
+<!-- Main Navigation -->
+<header>
+    <nav class="navbar navbar-expand-lg ml-auto navbar-dark fixed-top scrolling-navbar" style="background: #820014!important">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../fig/travel.png" class="rounded-circle" width="30" alt="xlab">
+            </a>
+
+            <a class="navbar-brand" href="../index.html"><strong>GAIR</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="navbar-nav ml-auto">
+                <a class="nav-link" href="../people/index.html">
+                    <li class="nav-item">
+                        <i class="far fa-file-alt"></i>
+                        People
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="../research/index.html">
+                    <li class="nav-item">
+                        <i class="fas fa-sync-alt"></i>
+                        Research
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link active" href="index.html">
+                    <li class="nav-item">
+                        <i class="fas fa-users"></i>
+                        Activities
+                    </a>
+                    </li>
+                </a>
+      
+                <a class="nav-link" href="../news/index.html">
+                    <li class="nav-item">
+                        <i class="far fa-newspaper"></i>
+                        News
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="https://github.com/gair-nlp" target="_blank">
+                    <li class="nav-item">
+                        <i class="fab fa-github pr-1"></i> Github
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="../peripherals/index.html">
+                    <li class="nav-item">
+                        <i class="fab fa-qq pr-1"></i> Peripherals
+                    </a>
+                    </li>
+                </a>
+
+                <a class="nav-link" href="../contact/index.html">
+                    <li class="nav-item">
+                        <i class="fab fa-whatsapp pr-1"></i> Contact
+                    </a>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Main Navigation -->
+<div class="container text-center py-5">
+</div>
+<body>
+
+<main style="margin-top: -5rem">
+    <!-- Section: Team v.1 -->
+    <section class="team-section text-center my-5">
+        <br>
+
+        <div class="row row-cols-1 row-cols-md-12 g-4">
+            <div class="card">
+                <h3><div class="card-header font-weight-bold">Team Building Activities</div></h3>
+                <div class="card-body text-left">
+                    <blockquote class="blockquote mb-0">
+                        At GAIR Lab, we believe that fostering a strong team culture is essential for collaborative research and innovation. Our team regularly engages in various activities to strengthen bonds, celebrate achievements, and create a supportive work environment.
+                        <ul>
+                            <li>
+                                <span class="badge rounded-pill badge-warning">Team Outings</span>: We organize regular outings to places like Disneyland to enjoy time together outside the lab.
+                            </li>
+                            <li>
+                                <span class="badge rounded-pill badge-warning">Group Dinners</span>: We celebrate research milestones, paper acceptances, and special occasions with team dinners.
+                            </li>
+                        </ul>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-12 g-4">
+            <div class="card">
+                <h3><div class="card-header font-weight-bold">Photo Gallery</div></h3>
+            </div>
+        </div>
+
+        <!-- Grid row -->
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col bg-light d-flex justify-content-center">
+                <div class="card bg-image align-content-center hover-overlay hover-zoom hover-shadow ripple" style="max-width: 15rem">
+                    <img
+                        src="./fig/annual/annual.jpg"
+                        class="card-img-top"
+                        style="height:160px;width:240px;"
+                        alt="Annual Party"
+                    />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Annual Party (January 2025)</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="./events/annual-party-2024.html"
+                            class="btn btn-primary" target="_blank">View Album</a>
+                    </div>
+                    <div class="card-detail">Our annual year-end celebration where we reflected on the year's achievements and enjoyed a festive evening together.</div>
+                </div>
+            </div>
+
+            <div class="col bg-light d-flex justify-content-center">
+                <div class="card bg-image align-content-center hover-overlay hover-zoom hover-shadow ripple" style="max-width: 15rem">
+                    <img
+                        src="./fig/disney/disney-03.png"
+                        class="card-img-top"
+                        style="height:160px;width:240px;"
+                        alt="Disney Castle"
+                    />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Disney Adventure (March 2025)</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="./events/disney-2025.html"
+                            class="btn btn-primary" target="_blank">View Album</a>
+                    </div>
+                    <div class="card-detail">Our exciting team trip to Shanghai Disneyland, where we enjoyed thrilling rides and took photos with Disney characters.</div>
+                </div>
+            </div>
+
+            <div class="col bg-light d-flex justify-content-center">
+                <div class="card bg-image align-content-center hover-overlay hover-zoom hover-shadow ripple" style="max-width: 15rem">
+                    <img
+                        src="./fig/dinner/dinner.jpg"
+                        class="card-img-top"
+                        style="height:160px;width:240px;"
+                        alt="Team Dinner"
+                    />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Team Dinner (2024 - 2025)</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="./events/team-dinner-2025.html"
+                            class="btn btn-primary" target="_blank">View Album</a>
+                    </div>
+                    <div class="card-detail">A team gathering to celebrate the successful submission of our latest research papers.</div>
+                </div>
+            </div>
+
+            <div class="col bg-light d-flex justify-content-center">
+                <div class="card bg-image align-content-center hover-overlay hover-zoom hover-shadow ripple" style="max-width: 15rem">
+                    <img
+                        src="./fig/happy-valley/happy-valley-01.jpg"
+                        class="card-img-top"
+                        style="height:160px;width:240px;"
+                        alt="Shanghai Happy Valley"
+                    />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Shanghai Happy Valley (June 2025)</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="./events/shanghai-happy-valley-2025.html"
+                            class="btn btn-primary" target="_blank">View Album</a>
+                    </div>
+                    <div class="card-detail">Our exciting team adventure at Shanghai Happy Valley theme park, experiencing thrilling rides and creating lasting memories together.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 时间轴部分 -->
+        <div class="row row-cols-1 row-cols-md-12 g-4 mt-5">
+            <div class="card">
+                <h3><div class="card-header font-weight-bold">Our Journey</div></h3>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h2>Annual Party</h2>
+                    <p class="timeline-date">January 2025</p>
+                    <p>Our team celebrated the achievements of the past year with an unforgettable annual party. It was a night of reflection, recognition, and looking forward to new research horizons.</p>
+                    <a href="./events/annual-party-2024.html" class="btn btn-sm btn-outline-primary">View Photos</a>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h2>Disney Adventure</h2>
+                    <p class="timeline-date">March 2025</p>
+                    <p>Our exciting trip to Shanghai Disneyland provided a perfect opportunity for team bonding outside the lab environment. We enjoyed thrilling rides and created lasting memories together.</p>
+                    <a href="./events/disney-2025.html" class="btn btn-sm btn-outline-primary">View Photos</a>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h2>Shanghai Happy Valley Adventure</h2>
+                    <p class="timeline-date">June 2025</p>
+                    <p>Our lab had an exciting day at Shanghai Happy Valley, experiencing thrilling rides and enjoying the charm of the theme park. It was a wonderful team-building activity that strengthened our bonds as a team.</p>
+                    <a href="./events/shanghai-happy-valley-2025.html" class="btn btn-sm btn-outline-primary">View Photos</a>
+                </div>
+            </div>
+            
+            <!-- 无线穿过的Our Story Goes On部分 -->
+            <div class="story-continues">
+                <div class="story-content">
+                    <h2 class="story-title"><i class="fas fa-hourglass-half"></i> Our Story Goes On</h2>
+                    <p>We look forward to creating more memories, strengthening our bonds, and continuing our journey of collaborative innovation. Stay tuned for more exciting team adventures!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Section: Team v.1 -->
+<script type="text/javascript" src="../mdb/js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../mdb/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../mdb/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../mdb/js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+
+</body>
+</html>
