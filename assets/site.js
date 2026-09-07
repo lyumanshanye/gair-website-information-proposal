@@ -16,6 +16,7 @@ if (document.body.classList.contains('legacy-page') && !document.querySelector('
       <a href="../index.html#resources" data-en="Resources" data-zh="资源">Resources</a>
       <a href="../news/index.html"${active('updates')} data-en="Updates" data-zh="动态">Updates</a>
       <a href="https://github.com/GAIR-NLP" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://huggingface.co/GAIR" target="_blank" rel="noopener">Hugging Face ↗</a>
       <a class="nav-cta" href="../contact/index.html" data-en="Join us" data-zh="加入我们">Join us</a>
     </div>
   </nav>`;
