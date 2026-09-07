@@ -83,6 +83,88 @@ document.querySelectorAll('[data-year]').forEach((node) => {
   node.textContent = String(new Date().getFullYear());
 });
 
+const flowCanvas = document.querySelector('[data-flow-field]');
+if (flowCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const context = flowCanvas.getContext('2d');
+  const particles = [];
+  let width = 0;
+  let height = 0;
+  let frame = 0;
+  let running = true;
+
+  const resetParticle = (particle, anywhere = false) => {
+    particle.x = anywhere ? Math.random() * width : -30;
+    particle.y = Math.random() * height;
+    particle.speed = .26 + Math.random() * .34;
+    particle.life = 150 + Math.random() * 170;
+    particle.age = anywhere ? Math.random() * particle.life : 0;
+    particle.width = .55 + Math.random() * .75;
+    particle.alpha = .045 + Math.random() * .065;
+    particle.trail = [];
+  };
+
+  const resizeFlow = () => {
+    const bounds = flowCanvas.getBoundingClientRect();
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+    width = Math.max(1, bounds.width);
+    height = Math.max(1, bounds.height);
+    flowCanvas.width = Math.round(width * pixelRatio);
+    flowCanvas.height = Math.round(height * pixelRatio);
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    const targetCount = width < 700 ? 26 : 54;
+    particles.length = 0;
+    for (let index = 0; index < targetCount; index += 1) {
+      const particle = {};
+      resetParticle(particle, true);
+      particles.push(particle);
+    }
+  };
+
+  const drawFlow = (time = 0) => {
+    context.clearRect(0, 0, width, height);
+    particles.forEach((particle) => {
+      const xRatio = particle.x / Math.max(width, 1);
+      const yRatio = particle.y / Math.max(height, 1);
+      const angle = Math.sin(xRatio * 7.2 + time * .00016) * .36
+        + Math.cos(yRatio * 8.4 - time * .00012) * .3;
+      particle.x += (.75 + Math.cos(angle)) * particle.speed;
+      particle.y += Math.sin(angle) * particle.speed * 1.8;
+      particle.age += 1;
+      particle.trail.push({ x: particle.x, y: particle.y });
+      if (particle.trail.length > 28) particle.trail.shift();
+
+      if (particle.trail.length > 2) {
+        context.beginPath();
+        context.moveTo(particle.trail[0].x, particle.trail[0].y);
+        particle.trail.slice(1).forEach((point) => context.lineTo(point.x, point.y));
+        const fade = Math.min(1, particle.age / 36) * Math.min(1, (particle.life - particle.age) / 36);
+        context.strokeStyle = `rgba(51, 117, 198, ${Math.max(0, particle.alpha * fade)})`;
+        context.lineWidth = particle.width;
+        context.stroke();
+      }
+
+      if (particle.x > width + 30 || particle.y < -30 || particle.y > height + 30 || particle.age >= particle.life) {
+        resetParticle(particle);
+      }
+    });
+    if (running) frame = window.requestAnimationFrame(drawFlow);
+  };
+
+  resizeFlow();
+  frame = window.requestAnimationFrame(drawFlow);
+  if ('ResizeObserver' in window) {
+    const flowResizeObserver = new ResizeObserver(resizeFlow);
+    flowResizeObserver.observe(flowCanvas);
+  } else {
+    window.addEventListener('resize', resizeFlow, { passive: true });
+  }
+  document.addEventListener('visibilitychange', () => {
+    running = !document.hidden;
+    window.cancelAnimationFrame(frame);
+    if (running) frame = window.requestAnimationFrame(drawFlow);
+  });
+}
+
 if (window.location.pathname.includes('/research/')) {
   document.querySelectorAll('a.btn').forEach((link) => {
     if (link.textContent.trim().toLowerCase() !== 'open') return;

@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#102d57">
   <title>GAIR — Generative Artificial Intelligence Research Lab</title>
   <link rel="icon" href="fig/balloon.png">
+  <link rel="preload" as="image" href="fig/travel_without_text.webp" type="image/webp">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body data-title-en="GAIR — Generative Artificial Intelligence Research Lab" data-title-zh="GAIR — 生成式人工智能研究实验室" data-description-en="GAIR develops open, rigorous and human-aligned generative AI—from pretraining and reasoning to agents and multimodal systems." data-description-zh="GAIR 开展开放、严谨、以人为本的生成式人工智能研究，覆盖预训练、推理、智能体与多模态系统。">
@@ -30,6 +31,7 @@
 
   <main id="main">
     <section class="hero">
+      <canvas class="hero-flow" data-flow-field aria-hidden="true"></canvas>
       <div class="container hero-grid">
         <div>
           <span class="eyebrow" data-en="Shanghai · Generative AI" data-zh="上海 · 生成式人工智能">Shanghai · Generative AI</span>
@@ -55,7 +57,10 @@
 
     <section class="signature-visual" aria-labelledby="journey-title">
       <div class="signature-frame">
-        <img src="fig/travel_without_text.png" alt="GAIR's illustrated journey through generative artificial intelligence">
+        <picture class="signature-artwork">
+          <source srcset="fig/travel_without_text.webp" type="image/webp">
+          <img src="fig/travel_without_text.png" width="2380" height="1571" loading="eager" fetchpriority="high" decoding="async" alt="GAIR's illustrated journey through generative artificial intelligence">
+        </picture>
         <div class="signature-caption"><span class="section-kicker" data-en="The GAIR journey" data-zh="GAIR 的旅程">The GAIR journey</span><h2 id="journey-title" data-en="Intelligence is a shared expedition." data-zh="探索智能，是一场共同的远行。">Intelligence is a shared expedition.</h2><p data-en="The original GAIR illustration returns as part of the lab's visual identity—a landscape of open questions, different paths and people moving forward together." data-zh="我们保留 GAIR 原有的标志性插画：开放问题构成地貌，不同路径彼此交汇，研究者共同向前。">The original GAIR illustration returns as part of the lab's visual identity—a landscape of open questions, different paths and people moving forward together.</p></div>
       </div>
     </section>
