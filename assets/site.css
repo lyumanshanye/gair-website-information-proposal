@@ -404,6 +404,27 @@ button, input { font: inherit; }
 .recruitment-notes li { display: grid; grid-template-columns: 44px 1fr; gap: 15px; padding: 23px 0; border-top: 1px solid rgba(255,255,255,.16); }
 .recruitment-notes li strong { display: grid; place-items: center; align-self: start; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.28); border-radius: 12px; color: #b8d9ff; font-size: 11px; }
 .recruitment-notes li p { margin: 0; color: #e2edf9; font-size: 14px; line-height: 1.75; }
+.admissions-guide .center-heading { margin-bottom: 36px; }
+.admissions-guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.direction-panel, .application-panel { min-width: 0; padding: clamp(30px, 4vw, 46px); border: 1px solid var(--line); border-radius: 24px; background: white; }
+.direction-panel { background: linear-gradient(145deg, #ffffff, #f8fbff); }
+.application-panel { border-color: #edcfb0; background: linear-gradient(145deg, #fffaf5, #ffffff); }
+.admissions-card-label { color: var(--blue); font-size: 11px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.application-panel .admissions-card-label { color: var(--orange); }
+.direction-panel h3, .application-panel h3 { margin: 12px 0 25px; font-family: Georgia, serif; font-size: clamp(28px, 3vw, 38px); font-weight: 500; line-height: 1.12; }
+.direction-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.direction-tags span { padding: 9px 12px; border: 1px solid #cddbeb; border-radius: 999px; color: #344b69; background: rgba(255,255,255,.82); font-size: 12px; font-weight: 700; }
+.application-steps { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.application-steps li { display: grid; grid-template-columns: 39px 1fr; gap: 13px; align-items: start; padding: 15px 0; border-top: 1px solid #eadfd4; color: #44536a; font-size: 13px; }
+.application-steps strong { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; color: var(--orange); background: var(--orange-soft); font-size: 10px; }
+.application-panel .contact-actions { margin-top: 25px; }
+.selection-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: white; }
+.selection-strip article { min-height: 185px; padding: 25px; border-right: 1px solid var(--line); }
+.selection-strip article:last-child { border-right: 0; }
+.selection-strip strong { color: var(--orange); font-size: 10px; letter-spacing: .12em; }
+.selection-strip h3 { margin: 22px 0 7px; font-size: 16px; }
+.selection-strip p { margin: 0; color: var(--muted); font-size: 12px; }
+#routes { scroll-margin-top: 82px; }
 .checklist { margin: 0; padding: 0; list-style: none; }
 .checklist li { position: relative; padding: 10px 0 10px 30px; border-bottom: 1px solid var(--line); color: #44536a; }
 .checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 850; }
@@ -463,6 +484,10 @@ button, input { font: inherit; }
   .course-showcase { grid-template-columns: 1fr; }
   .course-visual { min-height: 360px; }
   .recruitment-brief { grid-template-columns: 1fr; }
+  .admissions-guide-grid { grid-template-columns: 1fr; }
+  .selection-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .selection-strip article:nth-child(2) { border-right: 0; }
+  .selection-strip article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 }
 
 @media (max-width: 640px) {
@@ -515,6 +540,10 @@ button, input { font: inherit; }
   .recruitment-copy, .recruitment-notes { padding: 30px 24px; }
   .recruitment-notes li { grid-template-columns: 38px 1fr; gap: 12px; }
   .recruitment-notes li strong { width: 36px; height: 36px; }
+  .direction-panel, .application-panel { padding: 28px 23px; }
+  .selection-strip { grid-template-columns: 1fr; }
+  .selection-strip article, .selection-strip article:nth-child(2) { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .selection-strip article:last-child { border-bottom: 0; }
   .course-visual { min-height: 280px; padding: 26px; }
   .course-copy { padding: 32px 25px; }
 }
