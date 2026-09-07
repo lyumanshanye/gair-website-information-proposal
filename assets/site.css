@@ -8,6 +8,9 @@
   --blue: #195fba;
   --blue-soft: #eaf2ff;
   --gold: #d89b2b;
+  --orange: #bd5b00;
+  --orange-dark: #984800;
+  --orange-soft: #fff3e6;
   --radius: 20px;
   --shadow: 0 18px 50px rgba(18, 45, 83, 0.09);
   --max: 1180px;
@@ -77,8 +80,8 @@ button, input { font: inherit; }
   font-weight: 650;
 }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); background: var(--blue-soft); }
-.nav-links .nav-cta { margin-left: 5px; color: white; background: var(--navy); }
-.nav-links .nav-cta:hover { color: white; background: var(--blue); }
+.nav-links .nav-cta, .nav-links .nav-cta[aria-current="page"] { margin-left: 5px; color: white; background: var(--orange); box-shadow: 0 8px 22px rgba(189, 91, 0, .18); }
+.nav-links .nav-cta:hover, .nav-links .nav-cta[aria-current="page"]:hover { color: white; background: var(--orange-dark); }
 .nav-toggle { display: none; border: 0; background: transparent; padding: 9px; color: var(--ink); cursor: pointer; }
 .lang-toggle { min-width: 48px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; color: var(--navy); background: white; cursor: pointer; font-size: 12px; font-weight: 800; }
 .lang-toggle:hover { color: var(--blue); border-color: #b9cbe3; background: var(--blue-soft); }
@@ -141,6 +144,8 @@ button, input { font: inherit; }
 .button:hover { color: white; background: var(--blue); transform: translateY(-2px); }
 .button.secondary { color: var(--navy); background: white; border-color: var(--line); }
 .button.secondary:hover { color: var(--blue); background: var(--blue-soft); }
+.button.admissions-button { color: white; border-color: var(--orange); background: var(--orange); box-shadow: 0 12px 28px rgba(189, 91, 0, .18); }
+.button.admissions-button:hover { color: white; border-color: var(--orange-dark); background: var(--orange-dark); }
 .arrow { font-size: 17px; }
 .hero-card { position: relative; padding: 32px; border: 1px solid rgba(255,255,255,.8); border-radius: 28px; color: white; background: linear-gradient(155deg, #102d57, #123e74 68%, #1b5ca5); box-shadow: 0 30px 70px rgba(16, 45, 87, .24); }
 .hero-card::before { content: ""; position: absolute; width: 190px; height: 190px; right: -62px; top: -72px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; }
@@ -387,7 +392,7 @@ button, input { font: inherit; }
 .contact-card p { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
 .contact-actions .button { min-height: 42px; padding-inline: 16px; }
-.recruitment-section { padding-bottom: 56px; }
+.recruitment-section { padding-bottom: 56px; scroll-margin-top: 92px; }
 .recruitment-brief { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr); overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: white; box-shadow: var(--shadow); }
 .recruitment-copy { padding: clamp(34px, 5vw, 62px); }
 .recruitment-copy h2 { max-width: 620px; margin: 12px 0 22px; font-family: Georgia, serif; font-size: clamp(35px, 4vw, 50px); font-weight: 500; line-height: 1.1; }

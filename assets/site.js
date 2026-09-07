@@ -18,7 +18,7 @@ if (document.body.classList.contains('legacy-page') && !document.querySelector('
       <a href="../news/index.html"${active('updates')} data-en="Updates" data-zh="动态">Updates</a>
       <a href="https://github.com/GAIR-NLP" target="_blank" rel="noopener">GitHub ↗</a>
       <a href="https://huggingface.co/GAIR" target="_blank" rel="noopener">Hugging Face ↗</a>
-      <a class="nav-cta" href="../contact/index.html" data-en="Join us" data-zh="加入我们">Join us</a>
+      <a class="nav-cta" href="../contact/index.html#admissions" data-en="Admissions" data-zh="招生说明">Admissions</a>
     </div>
   </nav>`;
   document.body.prepend(header);
