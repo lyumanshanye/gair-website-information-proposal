@@ -8,7 +8,7 @@ if (document.body.classList.contains('legacy-page') && !document.querySelector('
   const header = document.createElement('header');
   header.className = 'site-header';
   header.innerHTML = `<nav class="nav-shell" aria-label="Primary navigation">
-    <a class="brand" href="../index.html" aria-label="GAIR home"><span class="brand-mark">G</span><span>GAIR<small>Generative AI Research Lab</small></span></a>
+    <a class="brand" href="../index.html" aria-label="GAIR home"><span class="brand-mark"><img src="../fig/balloon.png" alt="" width="44" height="44"></span><span>GAIR<small>Generative AI Research Lab</small></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">Menu</button>
     <div class="nav-links" id="nav-links">
       <a href="../research/index.html"${active('research')} data-en="Research" data-zh="研究">Research</a>
