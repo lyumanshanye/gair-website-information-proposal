@@ -14,6 +14,7 @@ if (document.body.classList.contains('legacy-page') && !document.querySelector('
       <a href="../research/index.html"${active('research')} data-en="Research" data-zh="研究">Research</a>
       <a href="../people/index.html"${active('people')} data-en="People" data-zh="成员">People</a>
       <a href="../index.html#resources" data-en="Resources" data-zh="资源">Resources</a>
+      <a href="https://gair-nlp.github.io/cs2916/docs/category/2025" target="_blank" rel="noopener" data-en="Teaching ↗" data-zh="课程 ↗">Teaching ↗</a>
       <a href="../news/index.html"${active('updates')} data-en="Updates" data-zh="动态">Updates</a>
       <a href="https://github.com/GAIR-NLP" target="_blank" rel="noopener">GitHub ↗</a>
       <a href="https://huggingface.co/GAIR" target="_blank" rel="noopener">Hugging Face ↗</a>

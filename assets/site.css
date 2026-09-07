@@ -135,9 +135,9 @@ button, input { font: inherit; }
 .metric strong { display: block; font-family: Georgia, serif; font-size: 27px; font-weight: 500; }
 .metric span { display: block; color: #bcd3ee; font-size: 11px; line-height: 1.35; }
 
-.signature-visual { padding: 42px 20px; background: white; }
-.signature-frame { position: relative; width: min(1180px, 100%); min-height: 520px; margin: auto; overflow: hidden; border-radius: 28px; background: #5cacd5; box-shadow: 0 24px 65px rgba(16,45,87,.14); }
-.signature-frame > img { width: 100%; height: clamp(520px, 46vw, 640px); object-fit: cover; object-position: center 48%; }
+.signature-visual { padding: 34px 20px; background: white; }
+.signature-frame { position: relative; width: min(1380px, 100%); min-height: 580px; margin: auto; overflow: hidden; border-radius: 28px; background: #5cacd5; box-shadow: 0 24px 65px rgba(16,45,87,.14); }
+.signature-frame > img { width: 100%; height: clamp(580px, 52vw, 730px); object-fit: cover; object-position: center 48%; transform: scale(.88); }
 .signature-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 48%, rgba(5,20,39,.5) 100%); }
 .signature-caption { position: absolute; z-index: 1; left: clamp(24px, 5vw, 72px); bottom: clamp(24px, 5vw, 66px); width: min(540px, calc(100% - 48px)); padding: 28px 30px; border: 1px solid rgba(255,255,255,.3); border-radius: 20px; color: white; background: rgba(9,31,57,.78); box-shadow: 0 16px 42px rgba(3,15,31,.24); backdrop-filter: blur(12px); }
 .signature-caption .section-kicker { color: #b9d8ff; }
@@ -470,8 +470,8 @@ button, input { font: inherit; }
   .album-card-wide { grid-column: auto; }
   .album-mosaic, .album-card:not(.album-card-wide) .album-mosaic { height: 220px; }
   .signature-visual { padding: 14px; }
-  .signature-frame { min-height: 460px; border-radius: 22px; }
-  .signature-frame > img { height: 460px; object-position: 66% center; }
+  .signature-frame { min-height: 510px; border-radius: 22px; }
+  .signature-frame > img { height: 510px; object-position: 66% center; }
   .signature-caption { left: 18px; bottom: 18px; width: calc(100% - 36px); padding: 22px; }
   .signature-caption p { display: none; }
   .course-visual { min-height: 280px; padding: 26px; }
